@@ -36,7 +36,7 @@
 </html> -->
 
 
- <!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -120,7 +120,87 @@
         });
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #333; color: white; padding: 10px; text-align: center; }
+        .product { display: inline-block; width: 200px; margin: 15px; background-color: white; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
+        .product:hover { transform: scale(1.05); }
+        .product img { width: 100%; }
+        .product-details { padding: 10px; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 10px; width: 100%; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .cart { background-color: #ff6347; color: white; padding: 10px; position: fixed; bottom: 20px; right: 20px; border-radius: 50%; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Online Shop</h1>
+</header>
+
+<div class="product">
+    <img src="https://via.placeholder.com/200" alt="Product 1">
+    <div class="product-details">
+        <h3>Product 1</h3>
+        <p>$25</p>
+        <button onclick="addToCart('Product 1', 25)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product">
+    <img src="https://via.placeholder.com/200" alt="Product 2">
+    <div class="product-details">
+        <h3>Product 2</h3>
+        <p>$30</p>
+        <button onclick="addToCart('Product 2', 30)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product">
+    <img src="https://via.placeholder.com/200" alt="Product 3">
+    <div class="product-details">
+        <h3>Product 3</h3>
+        <p>$40</p>
+        <button onclick="addToCart('Product 3', 40)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="cart" onclick="viewCart()">
+    🛒
+</div>
+
+<script>
+    let cart = [];
+
+    function addToCart(productName, price) {
+        cart.push({ productName, price });
+        alert(`${productName} added to cart`);
+    }
+
+    function viewCart() {
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+        } else {
+            let cartDetails = "Your Cart:\n";
+            cart.forEach(item => cartDetails += `${item.productName} - $${item.price}\n`);
+            alert(cartDetails);
+        }
+    }
+</script>
+
+</body>
 </html>
+
+
+
 
 
 
