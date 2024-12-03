@@ -121,86 +121,81 @@
     </script>
 </body>
 </html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping</title>
+    <title>My Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #333; color: white; padding: 10px; text-align: center; }
-        .product { display: inline-block; width: 200px; margin: 15px; background-color: white; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
-        .product:hover { transform: scale(1.05); }
-        .product img { width: 100%; }
-        .product-details { padding: 10px; }
-        button { background-color: #4CAF50; color: white; border: none; padding: 10px; width: 100%; cursor: pointer; }
-        button:hover { background-color: #45a049; }
-        .cart { background-color: #ff6347; color: white; padding: 10px; position: fixed; bottom: 20px; right: 20px; border-radius: 50%; cursor: pointer; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        header { background: #333; color: white; text-align: center; padding: 20px; }
+        nav { text-align: center; margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-size: 18px; }
+        .section { padding: 50px 10%; text-align: center; }
+        .section h2 { font-size: 2em; margin-bottom: 20px; }
+        .card { display: inline-block; width: 30%; margin: 10px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .card img { width: 100%; border-radius: 8px; }
+        .card h3 { font-size: 1.5em; margin-top: 10px; }
+        .card p { color: #666; font-size: 1em; }
+        .button { background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+        .footer { background: #333; color: white; padding: 20px 0; text-align: center; }
+        .footer a { color: white; text-decoration: none; }
+        .button:hover { background: #45a049; }
+        nav a:hover { color: #4CAF50; }
+        .card:hover { transform: scale(1.05); transition: transform 0.3s; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Our Online Shop</h1>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Discover my work and experience as a DevOps Engineer.</p>
 </header>
 
-<div class="product">
-    <img src="https://via.placeholder.com/200" alt="Product 1">
-    <div class="product-details">
-        <h3>Product 1</h3>
-        <p>$25</p>
-        <button onclick="addToCart('Product 1', 25)">Add to Cart</button>
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Hi, I'm [Your Name], a passionate DevOps Engineer with experience in automation, cloud computing, and CI/CD pipelines. I love optimizing infrastructure and implementing solutions that improve efficiency and scalability. Feel free to explore my projects and connect with me!</p>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Description of Project 1, explaining what was built, technologies used, and key achievements.</p>
+        <a href="#" class="button">View Project</a>
     </div>
-</div>
-
-<div class="product">
-    <img src="https://via.placeholder.com/200" alt="Product 2">
-    <div class="product-details">
-        <h3>Product 2</h3>
-        <p>$30</p>
-        <button onclick="addToCart('Product 2', 30)">Add to Cart</button>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Description of Project 2, explaining what was built, technologies used, and key achievements.</p>
+        <a href="#" class="button">View Project</a>
     </div>
-</div>
-
-<div class="product">
-    <img src="https://via.placeholder.com/200" alt="Product 3">
-    <div class="product-details">
-        <h3>Product 3</h3>
-        <p>$40</p>
-        <button onclick="addToCart('Product 3', 40)">Add to Cart</button>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Description of Project 3, explaining what was built, technologies used, and key achievements.</p>
+        <a href="#" class="button">View Project</a>
     </div>
-</div>
+</section>
 
-<div class="cart" onclick="viewCart()">
-    🛒
-</div>
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch, feel free to reach out to me via email or connect on LinkedIn.</p>
+    <a href="mailto:your.email@example.com" class="button">Email Me</a>
+</section>
 
-<script>
-    let cart = [];
-
-    function addToCart(productName, price) {
-        cart.push({ productName, price });
-        alert(`${productName} added to cart`);
-    }
-
-    function viewCart() {
-        if (cart.length === 0) {
-            alert("Your cart is empty!");
-        } else {
-            let cartDetails = "Your Cart:\n";
-            cart.forEach(item => cartDetails += `${item.productName} - $${item.price}\n`);
-            alert(cartDetails);
-        }
-    }
-</script>
+<footer class="footer">
+    <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    <p><a href="https://www.linkedin.com/in/yourlinkedin">LinkedIn</a> | <a href="https://github.com/yourgithub">GitHub</a></p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
