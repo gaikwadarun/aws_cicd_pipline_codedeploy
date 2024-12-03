@@ -40,121 +40,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discounted Online Shopping</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #0078d7;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      display: block;
-    }
-    nav a:hover {
-      background-color: #575757;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .product {
-      background: white;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 10px;
-    }
-    .product h3 {
-      margin: 10px 0;
-    }
-    .product button {
-      background-color: #0078d7;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .product button:hover {
-      background-color: #005bb5;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: #ff5733;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            background: #c70039;
+        }
+        .card {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            color: #2a5298;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>ShopEase</h1>
-    <p>Your one-stop shop for all your needs</p>
-  </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Cart</a>
-    <a href="#">Contact Us</a>
-  </nav>
-  <div class="products">
-    <div class="product">
-      <img src="https://www.google.com/imgres?q=healthcare%20product%20image&imgurl=https%3A%2F%2Frichesm.com%2Fwp-content%2Fuploads%2F2023%2F02%2Fherbal-healthcare-products.jpeg&imgrefurl=https%3A%2F%2Frichesm.com%2Fayurvedic-herbal-healthcare-products-for-complete-health%2F&docid=NjeLGFnt4rAHcM&tbnid=8el8efUV15SuEM&vet=12ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECHoQAA..i&w=1200&h=1200&hcb=2&ved=2ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECHoQAA" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>$10.00</p>
-      <button onclick="addToCart('Product 1')">Add to Cart</button>
+    <header>My Portfolio</header>
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate developer with a love for creating amazing web experiences.</p>
     </div>
-    <div class="product">
-      <img src="https://www.google.com/imgres?q=healthcare%20product%20image&imgurl=https%3A%2F%2Fassets.bizclikmedia.net%2F668%2F79d9ddc9e96be02f3a175ca1f6fb8a56%3Ae214c99a73f5f71e19e7a4bce2dda571%2Fnestle-health-science.jpg&imgrefurl=https%3A%2F%2Fhealthcare-digital.com%2Ftop10%2Ftop-10-consumer-healthcare-companies&docid=5RoChQVpaAGL9M&tbnid=8ODsIq93c7HBBM&vet=12ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECHgQAA..i&w=668&h=376&hcb=2&ved=2ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECHgQAA" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>$20.00</p>
-      <button onclick="addToCart('Product 2')">Add to Cart</button>
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="card">Project 1<br>Awesome Description</div>
+        <div class="card">Project 2<br>Exciting Details</div>
+        <div class="card">Project 3<br>Innovative Ideas</div>
     </div>
-    <div class="product">
-      <img src="https://www.google.com/imgres?q=healthcare%20product%20image&imgurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fmedical-product-mockups-display-medical-healthcare-product-designs_839035-310891.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Fpremium-ai-image%2Fmedical-product-mockups-display-medical-healthcare-product-designs_90953261.htm&docid=7jBgSE1Jaf2rzM&tbnid=X3nu840XD60yMM&vet=12ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECDYQAA..i&w=626&h=417&hcb=2&ved=2ahUKEwishczepYuKAxXkZWwGHY7HHN0QM3oECDYQAA" alt="Product 3">
-      <h3>Product 3</h3>
-      <p>$30.00</p>
-      <button onclick="addToCart('Product 3')">Add to Cart</button>
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+        <button class="button">Get in Touch</button>
     </div>
-  </div>
-  <footer>
-    <p>&copy; 2024 arungaikwad. All Rights Reserved.</p>
-  </footer>
-  <script>
-    function addToCart(productName) {
-      alert(`${productName} has been added to your cart!`);
-    }
-  </script>
+    <script>
+        document.querySelector('.button').addEventListener('click', () => {
+            alert('Thank you for reaching out!');
+        });
+    </script>
 </body>
 </html>
+
 
 
